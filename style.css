@@ -29,6 +29,7 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -92,4 +93,14 @@
 .section-result img {
   width: 80%;
   max-width: 500px;
+}
+
+/* ad */
+
+.kakao-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 100px;
 }

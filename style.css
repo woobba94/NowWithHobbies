@@ -6,8 +6,8 @@
 
 .landing {
   background-color: #0d6efd;
-  height: 70vh;
-  min-height: 500px;
+  height: 60vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +35,7 @@
   text-align: center;
   align-items: center;
   background: #e8eef4;
-  height: 30vh;
+  height: 40vh;
 }
 
 /* test.html */

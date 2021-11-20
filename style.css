@@ -1,106 +1,169 @@
 * {
-  font-family: "Noto Sans KR", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+}
+:root {
+    --color-main-1: #82a0aa;
+    --color-main-2: #7792a7;
+    --color-main-3: #7582a0;
+    --color-main-4: #7b7193;
+    --color-main-5: #825f7f;
+    --color-main-6: #854d64;
+
+    --color-button-1: #a72d2d;
+    --color-button-2: #b9888c;
+    --color-button-3: #6eb96e;
+    --color-button-4: #4fb14f;
 }
 
 /* index.html */
 
 .landing {
-  background-color: #0d6efd;
-  height: 60vh;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
+    background-color: #0d6efd;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
 .landing h1 {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 3px;
-  font-weight: 700;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+    font-weight: 700;
 }
 
 .landing p {
-  margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  align-items: center;
-  background: #e8eef4;
-  height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    background: #e8eef4;
+    height: 40vh;
 }
 
 /* test.html */
 
 .header {
-  background-color: #0d6efd;
-  height: 10vh;
-  min-height: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
+    background-color: #0d6efd;
+    height: 10vh;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 .header h1 {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 3px;
-  font-weight: 700;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+    font-weight: 700;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-main-1);
+    color: var(--color-main-4);
 }
 
 .questions .question {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: solid 1px #eeeeee;
-  padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
 }
 
-.questions .question h2 {
-  font-weight: 700;
+.question-box {
+    display: flex;
+    background-color: white;
+    width: 70vw;
+    max-width: 600px;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-main-3);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px var(--color-main-3);
 }
 
 .question p {
-  text-align: center;
-  width: 80%;
+    width: 75%;
+}
+
+.btn-group {
+    height: 10vh;
+    margin-top: 2rem;
+    display: flex;
+    width: 70vw;
+    max-width: 600px;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        var(--color-main-2),
+        var(--color-main-5)
+    );
+    border-radius: 10px;
+}
+
+.btn-group .btn {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.3s ease-out;
+}
+
+input[type="radio"] {
+    left: -999em;
+    position: absolute;
+}
+
+.btn-group .btn:hover {
+    background-color: var(--color-button-2);
+    font-weight: 1000;
 }
 
 .section-result {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
 }
 
 .section-result p {
-  width: 80%;
+    width: 80%;
 }
 
 .section-result img {
-  width: 80%;
-  max-width: 500px;
+    width: 80%;
+    max-width: 500px;
 }
 
 /* ad */
 
 .kakao-add {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 100px;
 }

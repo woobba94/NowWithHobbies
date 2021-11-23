@@ -81,6 +81,7 @@
 }
 
 .questions .question {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,12 +89,20 @@
     margin: 50px 0;
 }
 
+.q-number {
+    position: absolute;
+    font-size: 48px;
+    color: black;
+    top: 5%;
+    left: -10%;
+}
+
 .question-box {
     display: flex;
     background-color: white;
     width: 70vw;
     max-width: 600px;
-    height: 20vh;
+    height: 15vh;
     justify-content: center;
     align-items: center;
     border: 2px solid var(--color-main-3);
@@ -106,8 +115,8 @@
 }
 
 .btn-group {
-    height: 10vh;
-    margin-top: 2rem;
+    height: 7vh;
+    margin-top: 20px;
     display: flex;
     width: 70vw;
     max-width: 600px;
@@ -133,6 +142,12 @@
 input[type="radio"] {
     left: -999em;
     position: absolute;
+}
+
+input:checked + .btn {
+    font-size: 24px;
+    font-weight: 800;
+    background-color: var(--color-button-2);
 }
 
 .btn-group .btn:hover {

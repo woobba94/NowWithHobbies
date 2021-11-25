@@ -1,29 +1,37 @@
+var radios = document.querySelectorAll("input");
+for (var i = 0, max = radios.length; i < max; i++) {
+    radios[i].onclick = function () {
+        var next = "q" + this.name[1];
+        alert(next);
+        document.getElementById(next).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+        });
+    };
+}
+
 function result() {
     // 가중치 저장 변수 선언
-    // 집 가중치
+    // 실내선호 가중치
     var home_count = 0;
-
-    // 활동성 가중치
-    var active_count = 0;
-
-    // 이과 가중치
+    // 이과성향 가중치
     var it_count = 0;
-
+    // 외향성 가중치
+    var extrovert_count = 0;
     // 남성성 가중치
-    var mail_count = 0;
+    var male_count = 0;
 
     // 케이스 수만큼 반복
     for (var t = 0; t < 4; t++) {
         var case_name,
             count = 0;
         if (t == 0) case_name = "home_";
-        else if (t == 1) case_name = "active_";
+        else if (t == 1) case_name = "extrovert_";
         else if (t == 2) case_name = "it_";
-        else case_name = "mail_";
+        else case_name = "male_";
         // 각 가중치 버튼마다 반복 (-2 ~ +2)
         for (var i = -2; i <= 2; i++) {
             var input = case_name + String(i);
-            console.log("input : " + input);
             var elements =
                 document.getElementsByClassName(input);
             // 각 elements 하나씩 체크 확인
@@ -36,9 +44,9 @@ function result() {
             }
         }
         if (t == 0) home_count = count;
-        else if (t == 1) active_count = count;
+        else if (t == 1) extrovert_count = count;
         else if (t == 2) it_count = count;
-        else mail_count = count;
+        else male_count = count;
         console.log("home_count : " + home_count);
     }
 
@@ -71,4 +79,67 @@ function result() {
     // else if (yes_counter == 1)
     //     location.href = "result_2.html";
     // else location.href = "result_1.html";
+
+    // Counter에 따라 다른 결과 페이지로 이동하기
+    if (home_count > 0) {
+        if (it_count > 0) {
+            if (extrovert_count > 0) {
+                if (male_count > 0) {
+                    location.href = "result_1111.html";
+                } else {
+                    location.href = "result_1110.html";
+                }
+            } else {
+                if (male_count > 0) {
+                    location.href = "result_1101.html";
+                } else {
+                    location.href = "result_1100.html";
+                }
+            }
+        } else {
+            if (extrovert_count > 0) {
+                if (male_count > 0) {
+                    location.href = "result_1011.html";
+                } else {
+                    location.href = "result_1010.html";
+                }
+            } else {
+                if (male_count > 0) {
+                    location.href = "result_1001.html";
+                } else {
+                    location.href = "result_1000.html";
+                }
+            }
+        }
+    } else {
+        if (it_count > 0) {
+            if (extrovert_count > 0) {
+                if (male_count > 0) {
+                    location.href = "result_0111.html";
+                } else {
+                    location.href = "result_0110.html";
+                }
+            } else {
+                if (male_count > 0) {
+                    location.href = "result_0101.html";
+                } else {
+                    location.href = "result_0100.html";
+                }
+            }
+        } else {
+            if (extrovert_count > 0) {
+                if (male_count > 0) {
+                    location.href = "result_0011.html";
+                } else {
+                    location.href = "result_0010.html";
+                }
+            } else {
+                if (male_count > 0) {
+                    location.href = "result_0001.html";
+                } else {
+                    location.href = "result_0000.html";
+                }
+            }
+        }
+    }
 }

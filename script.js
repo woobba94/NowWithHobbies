@@ -2,7 +2,7 @@ var radios = document.querySelectorAll("input");
 for (var i = 0, max = radios.length; i < max; i++) {
     radios[i].onclick = function () {
         var next = "q" + this.name[1];
-        alert(next);
+        //alert(next);
         document.getElementById(next).scrollIntoView({
             behavior: "smooth",
             block: "center",

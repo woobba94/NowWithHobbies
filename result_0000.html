@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쿨찐 테스트</title>
-    <!-- 부트스트랩 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>이제 취미를 곁들인</title>
+
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +18,33 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo-test">
+        <source src="/Pattern - 87789.mp4" type="video/mp4">
+    </video>
     <header class="header">
-        <h1>쿨찐 테스트</h1>
+        <h1>당신이 곁들여 볼 취미는</h1>
     </header>
-    <section class="section-result">
-        <img src="img/5.png" alt="">
-        <h2 class="mt-5 mb-5">내가 진짜 쿨찐! 찐쿨찐!</h2>
-        <p>실내선호</p>
-        <p>이과</p>
-        <p>활동적</p>
-        <p>남자</p>
-        <a href="index.html" type="button" class="btn btn-warning mt-4">처음으로</a>
-    </section>
+    <div class="section-result-wrap">
+        <section class="section-result">
+            <ul id="ticker" class="ticker">
+                <li><a href="#">111</li>
+                <li><a href="#">222</li>
+                <li><a href="#">333</li>
+                <li><a href="#">444</li>
+            </ul>
+            <p class="result-text">그림 그리기</p>
+        </section>
+        <a href="index.html" type="button" class="button">처음으로</a>
+    </div>
+
+
+    <!-- 값 테스트 -->
+    <p>야외선호</p>
+    <p>문과</p>
+    <p>내향적</p>
+    <p>여자</p>
+
+
     <footer class="footer">
         <p>친구들도 테스트시키기</p>
         <!-- share sns -->
@@ -47,5 +61,6 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6194af9fc787899e"></script>
 </body>
+<script src="script.js"></script>
 
 </html>

@@ -25,12 +25,13 @@
         <h1>이제 취미를 곁들인</h1>
     </header>
     <section class="questions">
-        <article class="question">
+        <article id="q0" class="question">
             <div class="q-number">1</div>
             <div class="question-box">
                 <p>
                     쉬는 날엔 집에서 혼자 있는게 좋다.
                 </p>
+                <img src="./img/home.jpg" alt="">
             </div>
             <div class="btn-group">
                 </span>
@@ -47,12 +48,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q1" class="question">
             <div class="q-number">2</div>
-            <div id="q1" class="question-box" >
+            <div class="question-box" >
                 <p>
                     실내보다 야외에서 사진찍는것을 좋아한다.
                 </p>
+                <img src="./img/camera.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="home_-2" name="q2-btnradio" id="q2-btnradio1" autocomplete="off">
@@ -68,12 +70,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q2" class="question">
             <div class="q-number">3</div>
-            <div id="q2" class="question-box">
+            <div class="question-box">
                 <p>
                     사각형보다 원형을 더 선호한다.
                 </p>
+                <img src="./img/circle.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="it_2 male_1" name="q3-btnradio" id="q3-btnradio1" autocomplete="off">
@@ -89,12 +92,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q3" class="question">
             <div class="q-number">4</div>
-            <div id="q3" class="question-box">
+            <div class="question-box">
                 <p>
                     블랙홀이 생기는 이유를 설명할수 있다.
                 </p>
+                <img src="./img/black-hole.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="it_-2" name="q4-btnradio" id="q4-btnradio1" autocomplete="off">
@@ -110,12 +114,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q4" class="question">
             <div class="q-number">5</div>
-            <div id="q4" class="question-box">
+            <div class="question-box">
                 <p>
                     로멘스보다 SF장르가 좋다. 
                 </p>
+                <img src="./img/movie.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="it_-2 male_-2" name="q5-btnradio" id="q5-btnradio1" autocomplete="off">
@@ -131,12 +136,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q5" class="question">
             <div class="q-number">6</div>
-            <div id="q5" class="question-box">
+            <div class="question-box">
                 <p>
                     친구가 먼저 내게 연락하는 편이다.
                 </p>
+                <img src="./img/iphone.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="extrovert_2" name="q6-btnradio" id="q6-btnradio1" autocomplete="off">
@@ -152,12 +158,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q6" class="question">
             <div class="q-number">7</div>
-            <div id="q6" class="question-box">
+            <div class="question-box">
                 <p>
                     컴퓨터게임보다 보드게임을 더 좋아한다.
                 </p>
+                <img src="./img/game.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="home_1 male_2" name="q7-btnradio" id="q7-btnradio1" autocomplete="off">
@@ -173,9 +180,9 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q7" class="question">
             <div class="q-number">8</div>
-            <div id="q7" class="question-box">
+            <div class="question-box">
                 <p>
                     돌리 레드 루시드와 베이비 플레임은 분명한 차이가 있다.
                 </p>
@@ -195,12 +202,13 @@
             </div>
         </article>
 
-        <article class="question">
+        <article id="q8" class="question">
             <div class="q-number">9</div>
-            <div id="q8" class="question-box">
+            <div class="question-box">
                 <p>
                     사람들과 어울리기를 즐기고 그 속에서 즐거움을 찾는편이다.
                 </p>
+                <img src="./img/party.jpg" alt="">
             </div>
             <div class="btn-group">
                 <input type="radio" class="extrovert_-2" name="q9-btnradio" id="q9-btnradio1" autocomplete="off">
@@ -250,9 +258,11 @@
                 <label class="btn btn-outline-success" for="q1-btnradio3">Maybe</label>
             </div>
         </article> -->
+        <a onclick="result()" href="#" type="button" class="button">결과보기</a>
     </section>
+    
+
     <footer class="footer">
-        <a onclick="result()" href="#" type="button" class="btn btn-warning mt-4">결과보기</a>
     </footer>
 </body>
 <script src="script.js"></script>

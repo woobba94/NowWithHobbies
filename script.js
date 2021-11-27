@@ -2,11 +2,24 @@ var radios = document.querySelectorAll("input");
 for (var i = 0, max = radios.length; i < max; i++) {
     radios[i].onclick = function () {
         var next = "q" + this.name[1];
-        //alert(next);
-        document.getElementById(next).scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-        });
+
+        // // 첫번째 인덱스빼고 흐리기 동작
+        // if (i != 0) {
+        //     document.getElementById(
+        //         "q" + String(Number(this.name[1]) - 1)
+        //     ).style.opacity = "0.3";
+        // }
+
+        document.getElementById(
+            "q" + String(Number(this.name[1]) - 1)
+        ).style.opacity = "0.3";
+
+        if (next != "q9") {
+            document.getElementById(next).scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
     };
 }
 
@@ -67,8 +80,6 @@ function result() {
     //     );
     //     return;
     // }
-
-    console.log(home_count);
 
     // // Counter에 따라 다른 결과 페이지로 이동하기
     // if (yes_counter == 5) location.href = "result_5.html";

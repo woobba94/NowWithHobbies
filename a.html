@@ -6,80 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        section {
-            position: absolute;
-            width: 70px;
-            height: 27px;
-            overflow: hidden;
-
-            background-color: grey;
-            border-radius: 2px;
-            border: 1px solid lightgrey;
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            font-size: 13px;
-            line-height: 25px;
-            cursor: default;
-        }
-
-        #container {
-            position: absolute;
-            top: 2px;
-            width: 100%;
-            transition: top ease-in-out 0.5s;
-            text-align: center;
-        }
-    </style>
+    
     <title></title>
 </head>
 
 <body>
     <section id="display">
         <div id="container">
-            <div><span>1</span></div>
-            <div><span>2</span></div>
-            <div><span>3</span></div>
-            <div><span>4</span></div>
-            <div><span>WOW</span></div>
-            <div><span>6</span></div>
-            <div><span>7</span></div>
+            <ul id="list"></ul>
         </div>
     </section>
 
 
 
-    <script>
-        let display = document.getElementById('display');
-        let container = document.getElementById('container');
-        let hovering = false;
-
-        display.addEventListener('mouseover', () => {
-            if (hovering) return;
-            setTimeout(() => hovering = false, 1000);
-            moveContainer();
-            hovering = true;
-        });
-
-        function moveContainer() {
-            let choosenOption = getRandomOption();
-            setTop(-choosenOption.offsetTop + 2);
-        }
-
-        function setTop(top) {
-            container.style.top = `${top}px`;
-        }
-
-        function getRandomOption() {
-            let options = container.children;
-            let randomOption = Math.floor(Math.random() * (options.length));
-            let choosenOption = options[randomOption];
-
-            return choosenOption;
-        }
-
-    </script>
+    
 </body>
 
 </html>

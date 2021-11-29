@@ -63,7 +63,7 @@ body {
     font-weight: 700;
 }
 
-.landing p {
+.landing-p-tag-text {
     position: absolute;
     bottom: 200px;
     margin-bottom: 2px;
@@ -214,17 +214,55 @@ input:checked + .btn {
 
 .section-result {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     max-width: 800px;
     max-width: 600px;
     width: 50vw;
-    height: 20vh;
+    height: 10vh;
     background-color: white;
     border: 2px solid var(--color-main-3);
     border-radius: 15px;
     box-shadow: 0px 0px 10px 5px var(--color-primary-shadow);
     padding: 50px 0;
+}
+
+#display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: none;
+    color: black;
+    text-align: center;
+    font-size: 56px;
+    line-height: 168px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 2px;
+    transition: top ease-in-out 5s;
+    align-items: center;
+    justify-content: center;
+}
+
+#list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
 }
 
 .section-result p {

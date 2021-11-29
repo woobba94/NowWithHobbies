@@ -15,9 +15,12 @@
     <!-- add favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        
+    </style>
 </head>
 
-<body>
+<body onload="initResultPage()">
     <video autoplay muted loop id="myVideo-test">
         <source src="/Pattern - 87789.mp4" type="video/mp4">
     </video>
@@ -26,24 +29,14 @@
     </header>
     <div class="section-result-wrap">
         <section class="section-result">
-            <ul id="ticker" class="ticker">
-                <li><a href="#">111</li>
-                <li><a href="#">222</li>
-                <li><a href="#">333</li>
-                <li><a href="#">444</li>
-            </ul>
-            <p class="result-text">그림 그리기</p>
+            <div id="display">
+                <div id="container">
+                    <ul id="list"></ul>
+                </div>
+            </div>
         </section>
         <a href="index.html" type="button" class="button">처음으로</a>
     </div>
-
-
-    <!-- 값 테스트 -->
-    <p>야외선호</p>
-    <p>문과</p>
-    <p>내향적</p>
-    <p>여자</p>
-
 
     <footer class="footer">
         <p>친구들도 테스트시키기</p>
@@ -61,6 +54,8 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6194af9fc787899e"></script>
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+    
+</script>
 
 </html>

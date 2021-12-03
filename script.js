@@ -1,12 +1,12 @@
 // 가중치 저장 변수 선언
 // 실내선호 가중치
-var home_count = 0;
+var home_count = 1;
 // 이과성향 가중치
-var it_count = 0;
+var it_count = 1;
 // 외향성 가중치
-var extrovert_count = 0;
+var extrovert_count = 1;
 // 남성성 가중치
-var male_count = 0;
+var male_count = 1;
 
 var radios = document.querySelectorAll("input");
 for (var i = 0, max = radios.length; i < max; i++) {
@@ -56,10 +56,19 @@ function result() {
                 }
             }
         }
-        if (t == 0) home_count = count;
-        else if (t == 1) extrovert_count = count;
-        else if (t == 2) it_count = count;
-        else male_count = count;
+        if (t == 0) {
+            if (count < 0) home_count = 0;
+            else home_count = 1;
+        } else if (t == 1) {
+            if (count < 0) extrovert_count = 0;
+            else extrovert_count = 1;
+        } else if (t == 2) {
+            if (count < 0) it_count = 0;
+            else it_count = 1;
+        } else {
+            if (count < 0) male_count = 0;
+            else male_count = 1;
+        }
         console.log("home_count : " + home_count);
     }
     testDataSave();
@@ -251,4 +260,13 @@ function showResultPage() {
             }
         }
     }
+}
+
+function showResultPage() {
+    let target =
+        home_count.toString() +
+        it_count.toString() +
+        extrovert_count.toString() +
+        male_count.toString();
+    location.href = `result_${target}.html`;
 }

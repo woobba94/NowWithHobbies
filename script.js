@@ -210,7 +210,7 @@ function dataLoad(key) {
 }
 
 function setRollingData(hobby) {
-    let hobbylist = [
+    let rollingList = [
         "도서관에서 책읽기",
         "미술품 감상하기",
         "멋진 사진 찍기",
@@ -226,13 +226,13 @@ function setRollingData(hobby) {
         "컴퓨터 프로그래밍",
         "온라인 스터디하기",
     ];
-    hobbylist.push(hobby);
-    len = hobbylist.length;
+    rollingList.push(hobby);
+    len = rollingList.length;
     for (let j = 0; j < 14; j++) {
         for (let i = 0; i < len; i++) {
             var li = document.createElement("li");
             li.appendChild(
-                document.createTextNode(hobbylist[i])
+                document.createTextNode(rollingList[i])
             );
             ul.appendChild(li);
         }

@@ -122,39 +122,80 @@ function initResultPage() {
     let male = dataLoad("male_count");
     let pattern = home + it + extrovert + male;
     let hobby = "";
-    if (pattern == "0000") {
-        hobby = "리그오브레전드";
-    } else if (pattern == "0001") {
-        hobby = "이런취미";
-    } else if (pattern == "0010") {
-        hobby = "저런취미";
-    } else if (pattern == "0011") {
-        hobby = "요론취미";
-    } else if (pattern == "0100") {
-        hobby = "짱구보기";
-    } else if (pattern == "0101") {
-        hobby = "숨쉬기";
-    } else if (pattern == "0110") {
-        hobby = "널뛰기";
-    } else if (pattern == "0111") {
-        hobby = "asda";
-    } else if (pattern == "1000") {
-        hobby = "asda";
-    } else if (pattern == "1001") {
-        hobby = "asda";
-    } else if (pattern == "1010") {
-        hobby = "asda";
-    } else if (pattern == "1011") {
-        hobby = "asda";
-    } else if (pattern == "1100") {
-        hobby = "asda";
-    } else if (pattern == "1101") {
-        hobby = "레고 조립";
-    } else if (pattern == "1110") {
-        hobby = "asda";
-    } else {
-        hobby = "asda";
-    }
+
+    const hobbyList = {
+        "0000": [
+            "도서관에서 책읽기",
+            "밖, 문과, 여자, 내향",
+        ],
+        "0001": ["미술품 감상하기", "밖, 문과, 여자, 외향"],
+        "0010": ["멋진 사진 찍기", "밖, 문과, 여자, 내향"],
+        "0011": ["수영하기", "밖, 문과, 여자, 내향"],
+        "0100": ["예쁜 사진 찍기", "밖, 문과, 여자, 내향"],
+        "0101": ["쇼핑하기", "밖, 문과, 여자, 내향"],
+        "0110": ["자전거타기", "밖, 문과, 여자, 내향"],
+        "0111": ["보드타기", "밖, 문과, 여자, 내향"],
+        1000: ["뜨개질하기", "밖, 문과, 여자, 내향"],
+        1001: ["그림그리기", "밖, 문과, 여자, 내향"],
+        1010: ["기타치기", "밖, 문과, 여자, 내향"],
+        1011: ["리그오브레전드", "밖, 문과, 여자, 내향"],
+        1100: ["컴퓨터 프로그래밍", "밖, 문과, 여자, 내향"],
+        1101: ["온라인 스터디하기", "밖, 문과, 여자, 내향"],
+        1110: ["컴퓨터 프로그래밍", "밖, 문과, 여자, 내향"],
+        1111: ["리그오브레전드", "밖, 문과, 여자, 내향"],
+    };
+    console.log(hobbyList);
+    hobby = hobbyList[pattern][0];
+
+    // if (pattern == "0000") {
+    //     console.log("밖, 문과, 여자, 내향");
+    //     hobby = "도서관에서 책읽기";
+    // } else if (pattern == "0001") {
+    //     console.log("밖, 문과, 여자, 외향");
+    //     hobby = "미술품 감상하기";
+    // } else if (pattern == "0010") {
+    //     console.log("밖, 문과, 남자, 내향");
+    //     hobby = "멋진 사진 찍기";
+    // } else if (pattern == "0011") {
+    //     console.log("밖, 문과, 남자, 외향");
+    //     hobby = "수영하기";
+    // } else if (pattern == "0100") {
+    //     console.log("밖, 이과, 여자, 내향");
+    //     hobby = "예쁜 사진 찍기";
+    // } else if (pattern == "0101") {
+    //     console.log("밖, 이과, 여자, 외향");
+    //     hobby = "쇼핑하기";
+    // } else if (pattern == "0110") {
+    //     console.log("밖, 이과, 남자, 내향");
+    //     hobby = "자전거타기";
+    // } else if (pattern == "0111") {
+    //     console.log("밖, 이과, 남자, 외향");
+    //     hobby = "보드타기";
+    // } else if (pattern == "1000") {
+    //     console.log("집, 문과, 여자, 내향");
+    //     hobby = "뜨개질하기";
+    // } else if (pattern == "1001") {
+    //     console.log("집, 문과, 여자, 외향");
+    //     hobby = "그림그리기";
+    // } else if (pattern == "1010") {
+    //     console.log("집, 문과, 남자, 내향");
+    //     hobby = "기타치기";
+    // } else if (pattern == "1011") {
+    //     console.log("집, 문과, 남자, 외향");
+    //     hobby = "리그오브레전드 하기";
+    // } else if (pattern == "1100") {
+    //     console.log("집, 이과, 여자, 내향");
+    //     hobby = "컴퓨터 프로그래밍";
+    // } else if (pattern == "1101") {
+    //     console.log("집, 이과, 여자, 외향");
+    //     hobby = "온라인 스터디하기";
+    // } else if (pattern == "1110") {
+    //     console.log("집, 이과, 남자, 내향");
+    //     hobby = "컴퓨터 프로그래밍";
+    // } else {
+    //     console.log("집, 이과, 남자, 외향");
+    //     hobby = "리그오브레전드 하기";
+    // }
     setRollingData(hobby);
     moveContainer();
     sessionStorage.clear();
@@ -170,14 +211,24 @@ function dataLoad(key) {
 
 function setRollingData(hobby) {
     let hobbylist = [
-        "이런취미",
-        "저런취미",
-        "요론취미",
-        "음..",
+        "도서관에서 책읽기",
+        "미술품 감상하기",
+        "멋진 사진 찍기",
+        "수영하기",
+        "예쁜 사진 찍기",
+        "쇼핑하기",
+        "자전거타기",
+        "보드타기",
+        "뜨개질하기",
+        "그림그리기",
+        "기타치기",
+        "리그오브레전드",
+        "컴퓨터 프로그래밍",
+        "온라인 스터디하기",
     ];
     hobbylist.push(hobby);
     len = hobbylist.length;
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < 14; j++) {
         for (let i = 0; i < len; i++) {
             var li = document.createElement("li");
             li.appendChild(

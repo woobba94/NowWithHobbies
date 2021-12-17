@@ -24,15 +24,6 @@ body {
 
 /* index.html */
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -10;
-}
-
 .landing {
   position: relative;
   background-color: none;
@@ -59,20 +50,20 @@ body {
   position: absolute;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  padding-bottom: 3px;
+  padding: 5px 0 9px 0;
   font-weight: 700;
 }
 
 .landing-p-tag-text {
   position: absolute;
-  bottom: 200px;
+  top: 60%;
   margin-bottom: 2px;
 }
 
 .landing a {
   position: absolute;
   padding: 15px 50px;
-  bottom: 100px;
+  bottom: 0%;
 }
 
 .footer {
@@ -110,7 +101,7 @@ body {
   font-size: 64px;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  padding-bottom: 3px;
+  padding: 5px 0 9px 0;
   font-weight: 700;
 }
 
@@ -135,9 +126,10 @@ body {
 .q-number {
   position: absolute;
   font-size: 48px;
-  color: black;
+  color: rgb(255, 255, 255);
   top: 5%;
   left: -10%;
+  font-weight: 700;
 }
 
 .question-box {

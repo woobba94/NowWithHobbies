@@ -214,7 +214,7 @@ input:checked + .btn {
   align-items: center;
   max-width: 800px;
   max-width: 600px;
-  width: 50vw;
+  width: 80vw;
   height: 10vh;
   background-color: white;
   border: 2px solid var(--color-main-3);
@@ -228,11 +228,10 @@ input:checked + .btn {
   width: 100%;
   height: 100%;
   overflow: hidden;
-
   background-color: none;
   color: black;
   text-align: center;
-  font-size: 56px;
+  font-size: 42px;
   line-height: 168px;
 }
 
@@ -301,12 +300,21 @@ li {
   height: 100px;
 }
 
+@media only screen and (max-width: 750px) {
+  .header h1 {
+    font-size: 48px;
+  }
+  #display {
+    font-size: 36px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
   }
   .header h1 {
-    font-size: 48px;
+    font-size: 38px;
   }
   .q-number {
     font-size: 36px;
@@ -341,5 +349,13 @@ li {
 
   input:checked + .btn {
     font-size: 16px;
+  }
+
+  #display {
+    font-size: 26px;
+  }
+
+  .section-result {
+    width: 80vw;
   }
 }

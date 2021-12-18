@@ -387,6 +387,13 @@ li {
   padding: 0;
   margin: 0px;
   background-size: 1800% 1800%;
+  /* 크로싱 브라우저 */
+  /* 크롬, 사파리 */
+  -webkit-animation: Gradient 9s ease infinite;
+  /* 파이어폭스 */
+  -moz-animation: Gradient 9s ease infinite;
+  /* 오페라 */
+  -o-animation: Gradient 9s ease infinite;
 }
 
 .cube {
@@ -400,6 +407,13 @@ li {
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 12s ease-in forwards infinite;
+  /* 크로싱 브라우저 */
+  /* 크롬, 사파리 */
+  -webkit-animation: cube 12s ease-in forwards infinite;
+  /* 파이어폭스 */
+  -moz-animation: cube 12s ease-in forwards infinite;
+  /* 오페라 */
+  -o-animation: cube 12s ease-in forwards infinite;
 }
 .cube:nth-child(2n) {
   border-color: rgb(25, 0, 255);
@@ -431,6 +445,39 @@ li {
 }
 
 /* Animate Background*/
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes Gradient {
   0% {
     background-position: 0% 50%;
@@ -440,6 +487,36 @@ li {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+@-o-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
   }
 }
 @keyframes cube {

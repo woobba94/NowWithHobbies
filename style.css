@@ -1,6 +1,9 @@
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --color-main-1: #82a0aa;
   --color-main-2: #7792a7;
@@ -16,10 +19,6 @@
 
   --color-primary: #e8eef4;
   --color-primary-shadow: #cad5e0;
-}
-
-body {
-  scroll-behavior: smooth;
 }
 
 /* index.html */
